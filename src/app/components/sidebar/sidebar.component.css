@@ -1,0 +1,77 @@
+body {
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-12 {
+  font-size: 14px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.mb-250 {
+  margin-bottom: 250px;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+.ml-48 {
+  margin-left: 48px;
+}
+
+.mr-48 {
+  margin-right: 48px;
+}
+
+.mt-32 {
+  margin-left: 32px;
+}
+
+.silver-card {
+  background-image: linear-gradient(to right, gray, white, gray, rgb(96, 130, 141), gray, white, gray);
+}
+
+.text-custom {
+  border-left: 5px solid #4682B4;
+}
+
+.color-custom {
+  color: #4682B4;
+}
+
+.today li::marker {
+  color: #A52A2A;
+}
+
+.other-date li::marker {
+  color: #CF9E57;
+}
+
+.navbar-nav li a:active {
+  font-size: larger;
+}
+
+.nav-link .active {
+  color: #001f3f;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-link {
+  color: #001f3f;
+  font-weight: 400;
+}
+
+.content .bell {
+  position: absolute;
+  top: 9px;
+  left: 17px;
+}/*# sourceMappingURL=sidebar.component.css.map */

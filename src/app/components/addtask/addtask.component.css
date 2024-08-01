@@ -1,0 +1,307 @@
+body {
+  font-family: Montserrat;
+  height: 100vh;
+  width: 100%;
+  color: #001f3f;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.32px;
+}
+
+.nav-link .active {
+  color: #001f3f;
+  font-weight: 500;
+  font-style: bold;
+  font-size: 16px;
+}
+
+.nav-link {
+  color: #708090;
+  font-weight: 400;
+}
+
+.col-9 {
+  padding-left: 48px;
+  padding-right: 48px;
+  margin-top: 32px;
+}
+
+.custom-span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  color: #708090;
+}
+
+.bill {
+  font-size: 16px;
+  width: 59px;
+  height: 21px;
+  margin-top: 15px;
+  border-left: 2px solid #a3cae9;
+  width: 4px;
+  height: 24px;
+  gap: 0px;
+  border-radius: 2px 0px 0px 0px;
+  opacity: 0px;
+  padding-left: 5px;
+}
+
+.btn1 {
+  font-size: 16px;
+  color: #4682B4;
+  border: 0px;
+}
+.btn1:hover {
+  color: #4682B4;
+}
+
+.form-label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #708090;
+}
+
+#validationCustom01 {
+  font-family: Montserrat;
+  font-size: 16px;
+  color: #001f3f;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0px 2px 4px 0px rgba(0, 31, 63, 0.1098039216);
+  background-color: #ffffff;
+}
+#validationCustom01::-moz-placeholder {
+  color: #070c11;
+  opacity: 1;
+}
+#validationCustom01::placeholder {
+  color: #070c11;
+  opacity: 1;
+}
+
+#validationCustom03 {
+  font-family: Montserrat;
+  font-size: 16px;
+  color: #001f3f;
+  border-radius: 5px;
+  font-weight: 500;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 31, 63, 0.1098039216);
+}
+#validationCustom03::-moz-placeholder {
+  color: #001f3f;
+  opacity: 1;
+}
+#validationCustom03::placeholder {
+  color: #001f3f;
+  opacity: 1;
+}
+
+#validationCustom04 {
+  font-family: Montserrat;
+  font-size: 16px;
+  color: #c0c0c0;
+  border-radius: 5px;
+  font-weight: 400;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 31, 63, 0.1098039216);
+}
+#validationCustom04::-moz-placeholder {
+  color: #c0c0c0;
+  opacity: 1;
+}
+#validationCustom04::placeholder {
+  color: #c0c0c0;
+  opacity: 1;
+}
+
+#validationTextarea {
+  font-family: Montserrat;
+  font-size: 16px;
+  color: #c0c0c0;
+  height: 117px;
+  border-radius: 5px;
+  font-weight: 400;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 31, 63, 0.1098039216);
+}
+#validationTextarea::-moz-placeholder {
+  color: #c0c0c0;
+  opacity: 1;
+}
+#validationTextarea::placeholder {
+  color: #c0c0c0;
+  opacity: 1;
+}
+
+.btn-custom {
+  color: #ffffff;
+  background-color: #001f3f;
+}
+.btn-custom:hover {
+  background-color: #001f3f;
+  color: #ffffff;
+}
+
+#validationCustomUsername {
+  font-family: Montserrat;
+  font-size: 16px;
+  color: #c0c0c0;
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: #ffffff;
+  text-align: center;
+}
+#validationCustomUsername::-moz-placeholder {
+  color: #708090;
+  opacity: 1;
+}
+#validationCustomUsername::placeholder {
+  color: #708090;
+  opacity: 1;
+}
+
+#validationTextarea {
+  width: 100%;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+
+.textarea-end-info {
+  position: absolute;
+  bottom: 8px;
+  right: 48px;
+  font-size: 16px;
+  color: #c0c0c0;
+}
+
+.content .bell {
+  position: absolute;
+  top: 9px;
+  left: 17px;
+}
+
+.textarea-end-img {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+}
+
+.input-group .form-control {
+  padding-right: 2.5rem;
+}
+
+.input-group-append {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.input-group-append img {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  color: #708090;
+}
+
+.table {
+  width: 372px;
+  height: 300px;
+  top: 149px;
+  left: 587px;
+  gap: 0px;
+  border-radius: 10px 0px 0px 0px;
+  opacity: 0px;
+}
+
+h6 {
+  color: #001f3f;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+.calendar-table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+.calendar-table th,
+.calendar-table td {
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  height: 10px;
+}
+.calendar-table thead tr th {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #708090;
+}
+.calendar-table tbody tr td {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 0px;
+  letter-spacing: 0.5px;
+  color: #001f3f;
+  height: 10px;
+}
+
+.btn-ok {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #001f3f;
+  border: 0px;
+}
+
+.btn-cancel {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #708090;
+  border: 0px;
+}
+
+.modal-header {
+  border: 0px;
+}
+
+.mod-h5 {
+  margin-left: 145px;
+  font-size: 16px;
+  color: #001f3f;
+  border: 0px;
+}
+
+.custom-body {
+  justify-content: space-evenly;
+}
+.custom-body .right-cha {
+  margin: 0px -92px 12px 8px;
+}
+.custom-body .left-cha {
+  margin: 0px -92px 12px 8px;
+}
+
+.custom-mod {
+  border-radius: 3px 0px 0px 0px;
+}
+
+.custom-content {
+  background-color: #F9FAFB;
+}/*# sourceMappingURL=addtask.component.css.map */

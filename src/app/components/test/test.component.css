@@ -1,0 +1,7 @@
+.mat-form-field {
+  background-color: transparent; /* Removes the box background */
+}
+
+.mat-form-field-label {
+  background-color: white; /* Change 'white' to your desired color */
+}/*# sourceMappingURL=test.component.css.map */

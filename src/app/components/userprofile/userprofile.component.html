@@ -1,0 +1,66 @@
+<div class="mt-32">
+
+    <div class="container-fluid mt-4">
+        <div class="text-center mb-5">
+            <span class="fw-medium fs-5">Profile</span>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>
+                <span class="fw-semibold fs-5">Camile Jensen</span>
+                <p class="text-secondary">camjenadvo.dk</p>
+            </div>
+            <div>
+                <span class="fw-semibold fs-5 text-danger cursor-pointer" [routerLink]="['/']"
+                    routerLinkActive="router-link-active">Log out <i class="bi bi-box-arrow-left fs-4 mx-1"></i></span>
+            </div>
+        </div>
+
+        <div class="bg-black">
+            <hr>
+        </div>
+        <div class="fw-semibold fs-5 mb-3">
+            <span>Settings</span>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div class="mb-3">
+                <span class="fw-semibold fs-6">Push Notifications</span>
+                <p class="text-secondary">Get notifications regarding your unregistered hours</p>
+            </div>
+            <div>
+                <span><i class="bi bi-toggle-on fs-2"></i></span>
+            </div>
+        </div>
+        <div>
+            <span class="fw-semibold fs-6">Overdue Registration Notification</span>
+            <p class="text-secondary">Get notifications regarding overdue regidtrations (2 weeks or 1 month)</p>
+        </div>
+        <div class="mb-4">
+            <button type="button" class="btn shadow-sm" style="width: 60px;height: 35px;">2w</button>
+            <button type="button" class="btn shadow-sm bg-black text-white mx-3"
+                style="width: 60px;height: 35px;">1m</button>
+        </div>
+        <div>
+            <span class="fw-semibold fs-6">Time Registration rounding</span>
+            <p class="text-secondary">Choose how you want your minutes to be rounded up</p>
+        </div>
+        <div class="mb-4">
+            <button type="button" class="btn shadow-sm" style="width: 60px;height: 35px;">No</button>
+            <button type="button" class="btn shadow-sm mx-3 bg-black text-white"
+                style="width: 60px;height: 35px;">5</button>
+            <button type="button" class="btn shadow-sm" style="width: 60px;height: 35px;">0</button>
+        </div>
+        <div>
+            <span class="fw-semibold fs-6">Work Week</span>
+            <p class="text-secondary">Set the length of your work week</p>
+        </div>
+        <div>
+            <button type="button" class="btn shadow-sm" style="width: 60px;height: 35px;">5d</button>
+            <button type="button" class="btn shadow-sm text-white bg-black mx-3"
+                style="width: 60px;height: 35px;">7d</button>
+        </div>
+
+
+
+
+    </div>
+</div>

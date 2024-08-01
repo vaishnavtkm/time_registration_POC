@@ -1,0 +1,91 @@
+body {
+    font-family: Montserrat;
+    width: 1236px;
+    height: 100vh;
+    gap: 0px;
+    border-radius: 5px 0px 0px 0px;
+    opacity: 0px;
+    background-color: #F9FAFB;
+  }
+  .row {
+    background: #F9FAFB;
+    width: 100%;
+   height:100vh;
+    gap: 32px;
+    opacity: 0px;
+  
+    .col-4 {
+      .img {
+        width: 40px;
+        height: 40px;
+        margin-top: 20%;
+        margin-bottom: 5%;
+      }
+      p {
+        &.title {
+          color: #001f3f;
+          font-family: Montserrat;
+          font-size: 32px;
+          font-weight: 500;
+          line-height: 32px;
+          letter-spacing: -0.32px;
+          text-align: left;
+          width: 400px;
+          height: 32px;
+          gap: 0px;
+          opacity: 0px;
+        }
+        &.para {
+          font-family: Montserrat;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: -0.32px;
+          text-align: left;
+          color: #708090;
+        }
+      }
+      .mb-3 {
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: -0.32px;
+        text-align: left;
+        color: #708090;
+  
+        .form-control {
+          &::placeholder {
+            color: #b0b0b0;
+            font-size: 16px;
+            font-weight: 300;
+          }
+          color: #001f3f;
+          font-family: Montserrat;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 21px;
+          letter-spacing: -0.32px;
+        }
+        .form-check-label{
+          padding-left: 13px;
+          
+        }
+      }
+      .btn-custom{
+        height: 40px;
+        text-align: center;
+        background-color: #C0C0C0;
+        color: white;
+        margin-top: 20px;
+  
+        &:hover{
+          background-color: #001f3f;
+        }
+      }
+    }
+  }
+  .content .bell{
+    position: absolute;
+    top: 9px;
+    left: 9px;
+  }

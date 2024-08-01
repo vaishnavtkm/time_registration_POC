@@ -1,0 +1,177 @@
+<div class="ml-48 mt-32 mr-48 mt-32">
+    <div class="mt-0">
+
+        <div class="row">
+            <div class="text-center">
+                <app-test></app-test>
+            </div>
+
+            <div class="col-6 text-end  mt-2">
+
+            </div>
+
+            <div class="col-6 text-end"><button type="button" class="btn"> <i class="bi bi-trash3-fill"></i></button>
+            </div>
+
+            <div class="col-6 justify-content-end align-items-center fs-16">
+                <span class="custom-span me-2">Status</span>
+                <p class="bill mb-0">Billable</p>
+            </div>
+
+            <div class="col-6 text-end mt-3">
+                <img src="../../../assets/images/Add-to-regi.png" alt>
+                <button class="btn btn1" type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                    [routerLink]="'/timetask'">Add to
+                    registration</button>
+            </div>
+
+            <!-- modal -->
+
+            <div class="modal fade custom-mod" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content custom-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title mod-h5" id="exampleModalLabel">Add to Registration</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex flex-column align-items-center custom-body">
+                            <img src="../../../assets/images/Left-cha.png" alt="left arrow inside a circle"
+                                class="right-cha">
+                            <p class="mx-2">15.12.2023</p>
+                            <img src="../../../assets/images/right-cha.png" alt="right arrow inside a circle"
+                                class="left-cha">
+
+                            <!-- Cards section -->
+                            <div class="card text-custom mt-5 mb-2 w-100">
+                                <div class="card-body">
+                                    <div class="d-block">
+                                        <div>
+                                            <h5 class="card-title mb-0 fs-14">14:50 -</h5>
+                                            <p class="card-text mb-0 fs-14">In progress</p>
+                                        </div>
+                                        <div>
+                                            <a class="nav-link d-inline fs-16">
+                                                <i class="bi bi-pause-circle-fill color-custom"></i>
+                                            </a>
+                                            <span class="fs-14">00:48</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card text-custom mb-2 w-100">
+                                <div class="card-body">
+                                    <div class="d-flex w-100">
+                                        <div>
+                                            <h5 class="card-title fs-14">12:10 - 12:58</h5>
+                                            <p class="card-text mb-0 fs-14">13446 - O. Jeppesen</p>
+                                            <p class="card-text fs-14">Court Hearing - Being present at c...
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p class="fs-14">01:58</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card text-custom mb-2 w-100">
+                                <div class="card-body">
+                                    <div class="d-block">
+                                        <div>
+                                            <h5 class="card-title mb-0 fs-14">12:20 - 12:08</h5>
+                                            <p class="card-text mb-0 fs-14">13446 - O. Jeppesen</p>
+                                            <p class="card-text fs-14">Court Hearing - Being present at c...
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p class="fs-14">02:08</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label">From</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="12:42" required>
+
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label">To</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="13:04" required>
+
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustomUsername" class="form-label">Duration</label>
+                    <div class="input-group has-validation">
+                        <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
+                        <input type="text" class="form-control" id="validationCustomUsername"
+                            aria-describedby="inputGroupPrepend" placeholder="00:22" required>
+
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="validationCustom03" class="form-label">Client
+                        Name</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="clientName" name="clientname" required>
+                        <div class="input-group-append">
+                            <img src="../../../assets/images/X.png" alt="Clear">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="validationCustom03" class="form-label">Case
+                        Number</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="caseNumber" name="casenumber" required>
+                        <div class="input-group-append">
+                            <img src="../../../assets/images/X.png" alt="Clear">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="validationCustom03" class="form-label">Case</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="case" name="case" required>
+                        <div class="input-group-append">
+                            <img src="../../../assets/images/X.png" alt="Clear">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="validationCustom04" class="form-label">Type of
+                        work</label>
+                    <select class="form-select" id="typeOfWork" name="typeofwork" required>
+                        <option selected disabled value>Select
+                            the type of work</option>
+                        <option>Data Gathering</option>
+                        <option value="">case research</option>
+                    </select>
+
+                </div>
+                <div class="col-mb-12 position-relative">
+                    <label for="validationTextarea" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" placeholder="Type in/Record the description"
+                        name="description" required></textarea>
+                    <span class="textarea-end-info">Number
+                        of
+                        symbols 0/250</span>
+                    <img src="../../../assets/images/Group.png" alt="mic" class="textarea-end-img">
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-custom w-100" type="submit" (click)="submit()"><img class="mb-1"
+                            src="images/Plus.png" alt style="padding-right: 4px;">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

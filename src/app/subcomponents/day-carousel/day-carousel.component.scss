@@ -1,0 +1,4 @@
+.carousel { display: flex; align-items: center; }
+    .carousel-inner { display: flex; overflow: hidden; width: 200px; }
+    .carousel-item { flex: 0 0 100%; text-align: center; }
+    .active { font-weight: bold; }

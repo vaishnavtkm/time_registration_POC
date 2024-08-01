@@ -1,0 +1,101 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200%;
+}
+
+.body {
+  font-family: "montserrat", sans-serif;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-12 {
+  font-size: 14px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.mb-250 {
+  margin-bottom: 250px;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+.mr-100 {
+  margin-right: 100px;
+}
+
+.ml-48 {
+  margin-left: 48px;
+}
+
+.silver-card {
+  background-image: linear-gradient(to right, gray, white, gray, rgb(96, 130, 141), gray, white, gray);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-custom {
+  border-left: 5px solid #4682B4;
+}
+
+.color-custom {
+  color: #4682B4;
+}
+
+.today li::marker {
+  color: #A52A2A;
+}
+
+.other-date li::marker {
+  color: #CF9E57;
+}
+
+.content .bell {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+}
+
+.nav-link .active {
+  color: #001f3f;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.btn-background-1 {
+  color: #800000;
+}
+
+.align {
+  margin-bottom: 4%;
+  margin-left: 3px;
+}
+
+.col-card {
+  width: 50px;
+  height: 30px;
+  text-decoration: none;
+  border-radius: 12%;
+  margin-bottom: 90%;
+}
+
+.col-card-1 {
+  width: 50px;
+  height: 30px;
+  text-decoration: none;
+  background-color: #001F3F;
+  border-radius: 12%;
+  margin-bottom: 90%;
+  color: white;
+}/*# sourceMappingURL=userprofile.component.css.map */

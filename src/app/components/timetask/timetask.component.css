@@ -1,0 +1,76 @@
+body {
+  font-family: Montserrat;
+  height: 100vh;
+  width: 100%;
+  color: #001f3f;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.32px;
+  font-size: 16px;
+  background: #f9fafb;
+}
+
+.col-4 {
+  color: #708090;
+  font-weight: 400;
+  margin: 24px 0 24px 0;
+}
+.col-4 label {
+  margin-top: 8px;
+}
+.col-4.text-center {
+  color: #001f3f;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 32px;
+  padding: 16px 8px 16px 8px;
+  gap: 0px;
+  border-radius: 5px;
+  opacity: 0px;
+  text-align: center;
+  height: 64px;
+  width: 160px;
+  align-items: center;
+  margin-left: 35px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 31, 63, 0.1098039216);
+}
+.col-4 img {
+  margin: 10px 0 0 285px;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: left;
+  color: #001f3f;
+  width: auto;
+}
+
+.modal-body {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-align: left;
+  color: #708090;
+  height: 0;
+  width: auto;
+}
+
+.modal-footer {
+  border: 0px;
+  height: 0;
+  width: auto;
+}
+
+.btn-yes {
+  color: #001f3f;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  text-align: center;
+  border: 0px;
+}/*# sourceMappingURL=timetask.component.css.map */

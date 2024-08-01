@@ -1,0 +1,120 @@
+<div class="ml-48 mt-32 mr-48 mt-32">
+    <div class="row">
+        <div class="col-3 p-0 ">
+            <span class="fw-semibold me-auto">15.11.2023</span>
+        </div>
+        <div class="col-9 text-end p-0">
+            <button type="button" class="btn btn-outline-dark h-70 p-0 w-25"> <i
+                    class="bi bi-plus-circle-fill font-white"></i> Add New</button>
+            <button type="button" class="btn btn-dark h-70 p-0 w-25">Start Timer <i
+                    class="bi bi-play-circle-fill ms-1"></i></button>
+        </div>
+    </div>
+    <div class="row silver-card mt-3 rounded-1 shadow-sm">
+        <div class="col">
+            <div class="mt-2">
+                <H3>Total Hours December</H3>
+                <div class="row">
+                    <div class="col-7">
+                        <h4 class="d-inline fw-bold">116,30 </h4><span>/240</span>
+                    </div>
+                    <div class="col-4 pt-2">
+                        <div class="progress h-25 bg-transparent border border-black " role="progressbar"
+                            aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-dark" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <h6>46%</h6>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col fs-14 text-secondary">
+                        <p>Billable Hours</p>
+                    </div>
+                    <div class="col text-end "> 116,30</div>
+                </div>
+
+                <div class="row">
+                    <div class="col  fs-14 text-secondary">
+                        <p>Non-billable Hours</p>
+                    </div>
+                    <div class="col text-end"> 00,00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="row">
+            <div class="col-4 text-center" style="border-bottom: 3px solid black"><a
+                    class="nav-link active text-dark fs-14" aria-current="page" href="#">All
+                    <sup>8</sup></a></div>
+            <div class="col-4 text-center"><a class="nav-link active text-dark fs-14" aria-current="page"
+                    href="#">Registered <sup>5</sup></a></div>
+            <div class="col-4 text-center"><a class="nav-link active text-dark fs-14" aria-current="page" href="#">Draft
+                    <sup>3</sup></a></div>
+        </div>
+    </div>
+    <!-- <hr class="w-25 h-50"> -->
+    <div class="row mt-2">
+        <div class="col">
+            <h4 class="d-inline fw-bold">5,3h </h4><span>/7,5h</span>
+        </div>
+    </div>
+
+    <!-- @if(postsList$ | async as postList){
+        postsList
+    } -->
+    @for (post of postsList$ | async; track post.Id){
+    <div class="card text-custom mt-2 mb-2">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="card-title mb-0 fs-14">{{post.from}} - {{post.to}}</h5>
+                    <p class="card-text mb-0 fs-14">{{post.casenumber}} - {{post.clientname}}</p>
+                    <p class="card-text fs-14">{{post.description}}</p>
+                </div>
+                <div>
+                    <!-- <a class="nav-link d-inline fs-16">
+                        <i class="bi bi-pause-circle-fill color-custom "></i>
+                    </a> -->
+                    <span class="fs-14">{{post.to-post.from}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+
+    <!-- 
+    <div class="card text-custom mb-2">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="card-title fs-14">12:10 - 12:58</h5>
+                    <p class="card-text mb-0 fs-14">13446 - O. Jeppesen</p>
+                    <p class="card-text fs-14">Court Hearing - Being present at c...</p>
+                </div>
+                <div>
+                    <p class="fs-14">01:58
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card  text-custom mb-2">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="card-title mb-0 fs-14">12:20 - 12:08</h5>
+                    <p class="card-text mb-0 fs-14">13446 - O. Jeppesen</p>
+                    <p class="card-text fs-14">Court Hearing - Being present at c...</p>
+                </div>
+                <div>
+                    <p class="fs-14">02:08</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>

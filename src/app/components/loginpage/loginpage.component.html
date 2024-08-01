@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-4">
+  </div>
+  <div class="col-4">
+    <img class="img" src="../../../assets/images/EG.png" alt>
+    <p class="title">Log In</p>
+    <p class="para">Enter your work credentials in order to log in into the
+      app</p>
+    <form>
+      <div class="mb-3">
+        <label for="Email" class="form-label">Work Email</label>
+        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp"
+          placeholder="Type in work email">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Type in password">
+      </div>
+      <div class="mb-3 d-flex align-items-center">
+        <img src="../../../assets/images/Vector.png" alt="">
+        <label class="form-check-label mt-2 mb-0" for="exampleCheck1">Remember me
+          for 14 days</label>
+      </div>
+      <button type="submit" class="btn btn-custom w-100" [routerLink]="'/home'">Log In</button>
+    </form>
+  </div>
+  <div class="col-4"></div>
+</div>

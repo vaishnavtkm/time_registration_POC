@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3 shadow position-relative" style="height: 678px;" *ngIf="!isLoginpage()">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-9" *ngIf="!isLoginpage()">
+            <router-outlet />
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="loginpg" *ngIf="isLoginpage()">
+    <router-outlet />
+</div>
