@@ -47,6 +47,14 @@ body {
   color: #001f3f;
   width: auto;
 }
+.modal-title-1 {
+  font-family: "montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #001f3f;
+  width: auto;
+}
 
 .modal-body {
   font-size: 14px;
@@ -73,4 +81,4 @@ body {
   letter-spacing: 0.1px;
   text-align: center;
   border: 0px;
-}/*# sourceMappingURL=timetask.component.css.map */
+} /*# sourceMappingURL=timetask.component.css.map */

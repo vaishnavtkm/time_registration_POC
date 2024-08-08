@@ -1,28 +1,29 @@
+import { CommonModule, NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-day-carousel',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, NgFor],
   templateUrl: './day-carousel.component.html',
   styleUrl: './day-carousel.component.scss',
 })
 export class DayCarouselComponent {
-  @Input() days: number[] = [];
-  currentDay: number;
+  @Input() dates: Date[] = [];
+  currentDate: Date;
 
   constructor() {
-    this.currentDay = this.days[0];
+    this.currentDate = this.dates[0];
   }
 
   prev() {
-    const currentIndex = this.days.indexOf(this.currentDay);
-    this.currentDay =
-      this.days[(currentIndex - 1 + this.days.length) % this.days.length];
+    const currentIndex = this.dates.indexOf(this.currentDate);
+    this.currentDate =
+      this.dates[(currentIndex - 1 + this.dates.length) % this.dates.length];
   }
 
   next() {
-    const currentIndex = this.days.indexOf(this.currentDay);
-    this.currentDay = this.days[(currentIndex + 1) % this.days.length];
+    const currentIndex = this.dates.indexOf(this.currentDate);
+    this.currentDate = this.dates[(currentIndex + 1) % this.dates.length];
   }
 }

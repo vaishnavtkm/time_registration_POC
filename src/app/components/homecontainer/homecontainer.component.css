@@ -1,1 +1,227 @@
-/*# sourceMappingURL=homecontainer.component.css.map */
+* {
+  font-family: "montserrat";
+}
+
+.carousel-inner > .card {
+  padding: 0;
+}
+
+.carousel-inner.card {
+  width: 9rem;
+}
+
+.card-body-1 {
+  padding: 2px;
+  text-align: center;
+  border-style: none;
+  border: none;
+}
+
+.card-body-1:hover {
+  background-color: #f9fafb;
+  cursor: pointer;
+}
+
+.carousel-btn {
+  width: 24px;
+  height: 24px;
+  color: black;
+}
+
+.carousel-control-prev {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.text-bold {
+  font-weight: bold;
+  font-size: 16px;
+  display: inline;
+}
+
+.text-center {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.problem {
+  background: rgba(230, 186, 123, 0.2);
+  height: 40px;
+  position: relative;
+}
+
+.textproblem {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: rgb(230, 186, 123);
+  margin-left: 7px;
+}
+
+.textproblem > p {
+  display: inline;
+  margin-left: 10px;
+}
+
+.card-title {
+  font-size: 18px;
+}
+
+.inneritems {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 80px;
+}
+
+.dropdown {
+  display: inline;
+}
+
+.mr-4 {
+  margin-right: 4px;
+}
+
+.innertext {
+  padding-left: 7px;
+  border-left: 5px;
+  background-color: rgb(206, 206, 206);
+}
+
+.second {
+  position: absolute;
+  margin-left: 65%;
+  font-weight: bolder;
+  transform: translate(0, -50%);
+}
+
+.nav-link.active {
+  background-color: transparent !important;
+  color: #000000 !important; /* Use your desired text color */
+  border-bottom: 2px solid black;
+  border-radius: 0;
+}
+.nav-link {
+  color: #708090;
+  font-weight: 400;
+}
+
+.text-custom {
+  border-left: 5px solid #4682b4;
+}
+
+.text-custom:hover {
+  cursor: pointer;
+}
+
+.bord-left {
+  border-color: #cf9e57;
+}
+
+.first {
+  color: #cf9e57;
+  font-size: medium;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.color-custom {
+  color: #4682b4;
+}
+
+.time {
+  font-weight: 1000;
+}
+
+.warning-section {
+  margin-top: 16px;
+}
+
+.pd-16 {
+  padding-bottom: 16px;
+}
+
+.pl-0 {
+  padding-left: 0px;
+}
+
+.pl-48 {
+  padding-left: 48px;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+.pl-32 {
+  padding-left: 48px;
+}
+
+.pt-24 {
+  padding-top: 24px;
+}
+
+.pd-24 {
+  padding-bottom: 24px;
+}
+
+.pd-32 {
+  padding-bottom: 32px;
+}
+
+.dropdown {
+  margin-left: 690px;
+  padding-bottom: 100px;
+}
+
+.left-neg49 {
+  left: 0px;
+  top: 7px;
+}
+
+.right {
+  right: -30px;
+  bottom: 20px;
+}
+
+.add-btn {
+  position: fixed;
+  margin-left: 93%;
+  margin-top: 600px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.addd {
+  position: fixed;
+  margin-left: 64%;
+  margin-top: 600px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.events {
+  z-index: -1;
+}
+
+.align-dot {
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+.content {
+  position: relative;
+}
+
+.content img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.content .bell {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+} /*# sourceMappingURL=homecontainer.component.css.map */

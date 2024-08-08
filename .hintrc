@@ -24,6 +24,12 @@
           "width: fit-content"
         ]
       }
+    ],
+    "axe/aria": [
+      "default",
+      {
+        "aria-required-parent": "off"
+      }
     ]
   }
 }

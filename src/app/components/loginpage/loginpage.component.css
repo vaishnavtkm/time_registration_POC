@@ -5,11 +5,11 @@ body {
   gap: 0px;
   border-radius: 5px 0px 0px 0px;
   opacity: 0px;
-  background-color: #F9FAFB;
+  background-color: #f9fafb;
 }
 
 .row {
-  background: #F9FAFB;
+  background: #f9fafb;
   width: 100%;
   height: 100vh;
   gap: 32px;
@@ -23,7 +23,7 @@ body {
 }
 .row .col-4 p.title {
   color: #001f3f;
-  font-family: Montserrat;
+  font-family: "montserrat";
   font-size: 32px;
   font-weight: 500;
   line-height: 32px;
@@ -75,7 +75,7 @@ body {
 .row .col-4 .btn-custom {
   height: 40px;
   text-align: center;
-  background-color: #C0C0C0;
+  background-color: #c0c0c0;
   color: white;
   margin-top: 20px;
 }
@@ -87,4 +87,4 @@ body {
   position: absolute;
   top: 9px;
   left: 9px;
-}/*# sourceMappingURL=loginpage.component.css.map */
+} /*# sourceMappingURL=loginpage.component.css.map */

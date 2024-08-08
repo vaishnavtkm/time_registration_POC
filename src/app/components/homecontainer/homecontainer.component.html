@@ -47,45 +47,162 @@
     </div>
 
     <div class="row mt-5">
-        <div class="row">
-            <div class="col-4 text-center" style="border-bottom: 3px solid black"><a
-                    class="nav-link active text-dark fs-14" aria-current="page" href="#">All
-                    <sup>8</sup></a></div>
-            <div class="col-4 text-center"><a class="nav-link active text-dark fs-14" aria-current="page"
-                    href="#">Registered <sup>5</sup></a></div>
-            <div class="col-4 text-center"><a class="nav-link active text-dark fs-14" aria-current="page" href="#">Draft
-                    <sup>3</sup></a></div>
-        </div>
+        <ul class=" nav nav-pills">
+            <li class="nav-item col-4 text-center" role="presentation">
+                <a class="nav-link active text-dark fs-14" aria-current="page" data-bs-target="#all" role="tab"
+                    aria-selected="true" aria-controls="all" data-bs-toggle="pill">All<sup></sup></a>
+            </li>
+            <li class="nav-item col-4 text-center" role="presentation">
+                <a class="nav-link text-dark fs-14" data-bs-toggle="pill" role="tab" aria-controls="registered"
+                    aria-selected="false" data-bs-target="#registered">Registered<sup></sup></a>
+            </li>
+            <li class="nav-item col-4 text-center" role="presentation">
+                <a class="nav-link text-dark fs-14" data-bs-toggle="pill" role="tab" aria-controls="draft"
+                    aria-selected="false" data-bs-target="#draft">Draft<sup></sup></a>
+            </li>
+        </ul>
     </div>
-    <!-- <hr class="w-25 h-50"> -->
+
     <div class="row mt-2">
         <div class="col">
-            <h4 class="d-inline fw-bold">5,3h </h4><span>/7,5h</span>
+            <h4 class="d-inline fw-bold">1,3h </h4><span>/{{durationHours}},{{durationMinutes}}h</span>
         </div>
     </div>
 
-    <!-- @if(postsList$ | async as postList){
-        postsList
-    } -->
+
+
+    <div class="tab-content" style="overflow-x: hidden; padding: 10px; margin: -10px" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+            @for (post of postsList$ | async; track post.Id) {
+
+            @if(!hasNullValue(post)){
+            <div class="card text-custom mb-2 mt-3">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="card-title fs-14"><b>{{post.from}} - {{post.to}}</b></h5>
+                            <p class="card-text mb-0 fs-14">{{post.casenumber}} - {{post.clientname}}</p>
+                            <p class="card-text fs-14">{{post.description}}</p>
+                        </div>
+                        <div>
+                            <p class="fs-14"><b>{{post.duration}}</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>}
+            @else {
+            <div class="card  bord-left mt-3 mb-2">
+                <div class="card-body ">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="card-title mb-0 fs-14"><b>{{post.from}} - {{post.to}}</b></h5>
+                            <p class="card-text mb-0 fs-14">{{post.casenumber}} - {{post.clientname}}</p>
+                            <p class="card-text first mb-0 fs-14">Missing Information</p>
+                        </div>
+                        <div>
+                            <a class="nav-link d-inline fs-16">
+                                <img src="../../../assets/images/warning.svg" alt="">
+                            </a>
+                            <span class="fs-14"><b>{{post.duration}}</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+            }
+        </div>
+
+        <div class="tab-pane fade" id="registered" role="tabpanel" aria-labelledby="registered-tab" tabindex="0">
+            @for (post of postsList$ | async; track post.Id) {
+            @if(!hasNullValue(post)){
+            <div class="card text-custom mb-2 mt-3">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="card-title fs-14"><b>{{post.from}} - {{post.to}}</b></h5>
+                            <p class="card-text mb-0 fs-14">{{post.casenumber}} - {{post.clientname}}</p>
+                            <p class="card-text fs-14">{{post.description}}</p>
+                        </div>
+                        <div>
+                            <p class="fs-14"><b>{{post.duration}}</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+            }
+        </div>
+
+        <div class="tab-pane fade" id="draft" role="tabpanel" aria-labelledby="draft-tab" tabindex="0">
+            @for (post of postsList$ | async; track post.Id) {
+
+            @if(hasNullValue(post)) {
+            <div class="card  bord-left mt-3 mb-2">
+                <div class="card-body " (click)="updatePost(post.id)">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="card-title mb-2 fs-14"><b>{{post.from}} - {{post.to}}</b></h5>
+                            <p class="card-text mb-0 fs-14">{{post.casenumber}} - {{post.clientname}}</p>
+                            <p class="card-text first mb-0 fs-14">Missing Information</p>
+                        </div>
+                        <div>
+                            <a class="nav-link d-inline fs-16">
+                                <img src="../../../assets/images/warning.svg" alt="">
+                            </a>
+                            <span class="fs-14"><b>{{post.duration}}</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            } }
+        </div>
+    </div>
+
+
+
+
+    <!-- <div class="row mt-5">
+        <div class="row">
+            <div class="col-4 text-center" style="border-bottom: 3px solid black"><a
+                    class="nav-link active text-dark fs-14" aria-current="page" href="#">All
+                    <sup></sup></a></div>
+            <div class="col-4 text-center"><a class="nav-link active text-dark fs-14" aria-current="page"
+                    href="#">Registered <sup></sup></a></div>
+            <div class="col-4 text-center"><a class="nav-link active text-dark fs-14" aria-current="page" href="#">Draft
+                    <sup></sup></a></div>
+        </div>
+    </div> -->
+
+
+
+    <!-- <hr class="w-25 h-50"> -->
+    <!-- <div class="row mt-2">
+        <div class="col">
+            <h4 class="d-inline fw-bold">1,3h </h4><span>/{{durationHours}},{{durationMinutes}}h</span>
+        </div>
+    </div>
+
     @for (post of postsList$ | async; track post.Id){
-    <div class="card text-custom mt-2 mb-2">
+    <div class="card text-custom mb-2 mt-3">
         <div class="card-body">
             <div class="d-flex justify-content-between align-items-center">
                 <div>
-                    <h5 class="card-title mb-0 fs-14">{{post.from}} - {{post.to}}</h5>
+                    <h5 class="card-title fs-14"><b>{{post.from}} - {{post.to}}</b></h5>
                     <p class="card-text mb-0 fs-14">{{post.casenumber}} - {{post.clientname}}</p>
                     <p class="card-text fs-14">{{post.description}}</p>
+
                 </div>
                 <div>
-                    <!-- <a class="nav-link d-inline fs-16">
-                        <i class="bi bi-pause-circle-fill color-custom "></i>
-                    </a> -->
-                    <span class="fs-14">{{post.to-post.from}}</span>
+                    <p class="fs-14"><b>{{post.duration}}</b>
                 </div>
             </div>
         </div>
     </div>
-    }
+    } -->
+    <!-- @if(postsList$ | async as postList){
+        postsList
+    } -->
+
 
     <!-- 
     <div class="card text-custom mb-2">
@@ -95,6 +212,9 @@
                     <h5 class="card-title fs-14">12:10 - 12:58</h5>
                     <p class="card-text mb-0 fs-14">13446 - O. Jeppesen</p>
                     <p class="card-text fs-14">Court Hearing - Being present at c...</p>
+                    <a class="nav-link d-inline fs-16"><img src="../../../assets/images/add.svg" alt="">
+                        2
+                        registrations</a>
                 </div>
                 <div>
                     <p class="fs-14">01:58
@@ -118,3 +238,5 @@
         </div>
     </div> -->
 </div>
+
+<!-- {{postsList$|async|json }} -->

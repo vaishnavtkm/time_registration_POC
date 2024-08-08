@@ -1,9 +1,9 @@
 <div class="carousel">
     <button (click)="prev()">&#10094;</button>
     <div class="carousel-inner">
-      <div *ngFor="let day of days" class="carousel-item" [class.active]="day === currentDay">
-        {{ day }}
-      </div>
+        <div *ngFor="let date of dates" class="carousel-item" [class.active]="date === currentDate">
+            {{ date | date: 'MMMM yyyy' }}
+        </div>
     </div>
     <button (click)="next()">&#10095;</button>
-  </div>
+</div>

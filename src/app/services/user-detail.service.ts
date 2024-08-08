@@ -13,15 +13,18 @@ export class UserDetailService {
   getTime(): Observable<any[]> {
     return this.http.get<any>(this.baseServerUrl + '/Posts');
   }
+  getTimeById(id: number): Observable<any> {
+    return this.http.get<any>(this.baseServerUrl + `/Posts/${id}`);
+  }
 
   registerTime(data: any) {
     return this.http.post(this.baseServerUrl + '/Posts/', data);
   }
 
   updateTime(id: number | string, data: any) {
-    return this.http.put(this.baseServerUrl + `Posts/${id}`, data);
+    return this.http.put(this.baseServerUrl + `/Posts/${id}`, data);
   }
   deleteTime(id: number | string) {
-    return this.http.delete(this.baseServerUrl + `Posts/${id}`);
+    return this.http.delete(this.baseServerUrl + `/Posts/${id}`);
   }
 }
