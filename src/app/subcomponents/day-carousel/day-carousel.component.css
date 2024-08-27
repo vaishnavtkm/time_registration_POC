@@ -1,6 +1,5 @@
 .carousel {
   display: flex;
-  align-items: center;
 }
 
 .carousel-inner {
@@ -16,4 +15,4 @@
 
 .active {
   font-weight: bold;
-}/*# sourceMappingURL=day-carousel.component.css.map */
+} /*# sourceMappingURL=day-carousel.component.css.map */

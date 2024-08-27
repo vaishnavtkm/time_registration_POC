@@ -50,15 +50,15 @@
         <ul class=" nav nav-pills">
             <li class="nav-item col-4 text-center" role="presentation">
                 <a class="nav-link active text-dark fs-14" aria-current="page" data-bs-target="#all" role="tab"
-                    aria-selected="true" aria-controls="all" data-bs-toggle="pill">All<sup></sup></a>
+                    aria-selected="true" aria-controls="all" data-bs-toggle="pill">All<sup> {{postsLength}}</sup></a>
             </li>
             <li class="nav-item col-4 text-center" role="presentation">
                 <a class="nav-link text-dark fs-14" data-bs-toggle="pill" role="tab" aria-controls="registered"
-                    aria-selected="false" data-bs-target="#registered">Registered<sup></sup></a>
+                    aria-selected="false" data-bs-target="#registered">Registered<sup> {{postsLength-hasMissingCount}}</sup></a>
             </li>
             <li class="nav-item col-4 text-center" role="presentation">
                 <a class="nav-link text-dark fs-14" data-bs-toggle="pill" role="tab" aria-controls="draft"
-                    aria-selected="false" data-bs-target="#draft">Draft<sup></sup></a>
+                    aria-selected="false" data-bs-target="#draft">Draft<sup> {{hasMissingCount}}</sup></a>
             </li>
         </ul>
     </div>
@@ -71,15 +71,15 @@
 
 
 
-    <div class="tab-content" style="overflow-x: hidden; padding: 10px; margin: -10px" id="v-pills-tabContent">
+    <div class="tab-content mt-1" style="overflow-x: hidden;  margin: -10px" id="v-pills-tabContent">
         <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
             @for (post of postsList$ | async; track post.Id) {
 
             @if(!hasNullValue(post)){
-            <div class="card text-custom mb-2 mt-3">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
+            <div class="card  mb-2 mt-3">
+                <div class="card-body ">
+                    <div class="d-flex text-custom justify-content-between align-items-center">
+                        <div class="ms-3">
                             <h5 class="card-title fs-14"><b>{{post.from}} - {{post.to}}</b></h5>
                             <p class="card-text mb-0 fs-14">{{post.casenumber}} - {{post.clientname}}</p>
                             <p class="card-text fs-14">{{post.description}}</p>
@@ -91,10 +91,10 @@
                 </div>
             </div>}
             @else {
-            <div class="card  bord-left mt-3 mb-2">
+            <div class="card mt-3 mb-2">
                 <div class="card-body ">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
+                    <div class="d-flex bord-left justify-content-between align-items-center">
+                        <div class="ms-3">
                             <h5 class="card-title mb-0 fs-14"><b>{{post.from}} - {{post.to}}</b></h5>
                             <p class="card-text mb-0 fs-14">{{post.casenumber}} - {{post.clientname}}</p>
                             <p class="card-text first mb-0 fs-14">Missing Information</p>
@@ -115,10 +115,10 @@
         <div class="tab-pane fade" id="registered" role="tabpanel" aria-labelledby="registered-tab" tabindex="0">
             @for (post of postsList$ | async; track post.Id) {
             @if(!hasNullValue(post)){
-            <div class="card text-custom mb-2 mt-3">
+            <div class="card mb-2 mt-3">
                 <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
+                    <div class="d-flex text-custom justify-content-between align-items-center">
+                        <div class="ms-3">
                             <h5 class="card-title fs-14"><b>{{post.from}} - {{post.to}}</b></h5>
                             <p class="card-text mb-0 fs-14">{{post.casenumber}} - {{post.clientname}}</p>
                             <p class="card-text fs-14">{{post.description}}</p>
@@ -137,10 +137,10 @@
             @for (post of postsList$ | async; track post.Id) {
 
             @if(hasNullValue(post)) {
-            <div class="card  bord-left mt-3 mb-2">
+            <div class="card   mt-3 mb-2">
                 <div class="card-body " (click)="updatePost(post.id)">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
+                    <div class="d-flex bord-left justify-content-between align-items-center">
+                        <div class="ms-3">
                             <h5 class="card-title mb-2 fs-14"><b>{{post.from}} - {{post.to}}</b></h5>
                             <p class="card-text mb-0 fs-14">{{post.casenumber}} - {{post.clientname}}</p>
                             <p class="card-text first mb-0 fs-14">Missing Information</p>

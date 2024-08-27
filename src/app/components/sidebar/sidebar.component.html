@@ -22,12 +22,11 @@
             <a class="nav-link" [routerLink]="'/addtask'" routerLinkActive="fw-bold"
                 [routerLinkActiveOptions]="{exact:true}">
                 <i class="bi bi-plus-circle fs-5"></i> <span class="ms-3 fs-16">
-                    Time
-                    registration </span></a>
+                    Register Time </span></a>
         </li>
 
         <li class="nav-item mt-2">
-            <a [routerLink]="'day'" class="nav-link" routerLinkActive="fw-bold"
+            <a [routerLink]="'month'" class="nav-link" routerLinkActive="fw-bold"
                 [routerLinkActiveOptions]="{exact:true}"><i class="bi bi-calendar4 fs-5"></i> <span class="ms-3 fs-16">
                     Calendar
                 </span></a>
@@ -57,7 +56,7 @@
             <a class="nav-link" [routerLink]="'userprofile'" routerLinkActive="fw-bold"
                 [routerLinkActiveOptions]="{exact:true}"><i class="bi bi-person-circle fs-5"></i> <span
                     class="ms-3 fs-16">
-                    Camile Jensen </span></a>
+                    {{name}} </span></a>
         </li>
     </ul>
 </div>

@@ -8,11 +8,13 @@ import { TestComponent } from '../test/test.component';
 import { DataShareService } from '../../services/data-share.service';
 import { NullcheckerService } from '../../services/nullchecker.service';
 import { routes } from '../../app.routes';
+import { DropdownServiceService } from '../../services/dropdown-service.service';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-addtask',
   standalone: true,
-  imports: [RouterLink, FormsModule, TestComponent],
+  imports: [RouterLink, FormsModule, TestComponent, AsyncPipe],
   providers: [UserDetailService],
   templateUrl: './addtask.component.html',
   styleUrl: './addtask.component.scss',
@@ -29,12 +31,17 @@ export class AddtaskComponent implements OnInit {
     description: '',
   };
   id: number | null = null;
+
+  //! DROPDOWN var :
+
+  options: string[] = [];
+
   constructor(
     private userDetail: UserDetailService,
     private dataShare: DataShareService,
-    private nullChecker: NullcheckerService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private dropDownService: DropdownServiceService
   ) {}
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((value) => {
@@ -42,6 +49,12 @@ export class AddtaskComponent implements OnInit {
       if (this.id) {
         this.patchValues(this.id);
       }
+    });
+
+    // DROPDOWN
+
+    this.dropDownService.getDropDownOptions().subscribe((values) => {
+      this.options = values.options;
     });
   }
 
@@ -67,8 +80,12 @@ export class AddtaskComponent implements OnInit {
     // Convert duration back to hours and minutes
     const durationHours = Math.floor(durationMinutes / 60);
     const durationRemainingMinutes = durationMinutes % 60;
-    if (durationHours < 10) {
+    if (durationHours < 10 && durationRemainingMinutes < 10) {
+      this.forms.duration = `0${durationHours}:0${durationRemainingMinutes}`;
+    } else if (durationHours < 10) {
       this.forms.duration = `0${durationHours}:${durationRemainingMinutes}`;
+    } else if (durationRemainingMinutes < 10) {
+      this.forms.duration = `${durationHours}:0${durationRemainingMinutes}`;
     } else {
       this.forms.duration = `${durationHours}:${durationRemainingMinutes}`;
     }
@@ -99,18 +116,21 @@ export class AddtaskComponent implements OnInit {
     });
   }
   //  submit button
+
   onSubmit() {
-    if (this.id) {
-      console.log(this.forms);
-      this.userDetail
-        .updateTime(this.id, { id: this.id, ...this.forms })
-        .subscribe((updatedPost) => {
-          alert('Details Updated');
+    if (sessionStorage.getItem('refreshToken')) {
+      if (this.id) {
+        console.log(this.forms);
+        this.userDetail
+          .updateTime(this.id, { id: this.id, ...this.forms })
+          .subscribe((updatedPost) => {
+            alert('Details Updated');
+          });
+      } else {
+        this.userDetail.registerTime(this.forms).subscribe((response) => {
+          alert('Submitted successfully ');
         });
-    } else {
-      this.userDetail.registerTime(this.forms).subscribe((response) => {
-        alert('Submitted successfully ');
-      });
+      }
     }
   }
 

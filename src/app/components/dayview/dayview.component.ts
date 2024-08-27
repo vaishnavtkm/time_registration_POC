@@ -1,6 +1,11 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-
+import {
+  Component,
+  ViewChild,
+  ElementRef,
+  Input,
+  OnChanges,
+} from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,6 +17,4 @@ import { CommonModule } from '@angular/common';
   templateUrl: './dayview.component.html',
   styleUrl: './dayview.component.scss',
 })
-export class DayviewComponent {
-  
-}
+export class DayviewComponent {}

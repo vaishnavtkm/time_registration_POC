@@ -83,7 +83,7 @@
                         <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
                             <li><a class="dropdown-item" href="../dayview/dayview.component.html"
                                     [routerLink]="['/day']" routerLinkActive="router-link-active"><img
-                                        src="../../../assets/logo/dropdown_dayview.svg" alt=""> Day view</a>
+                                        src="../../../assets/logo/dropdown_dayview.svg" alt="">Week view</a>
                             </li>
 
                         </ul>
@@ -104,214 +104,54 @@
                 </div>
 
                 <!-- date-carousel -->
-                <div id="carouselExampleControls" class="carousel carousel-dark slide pd-24">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="card-wrapper container-sm d-flex justify-content-around">
-                                <div class="card" style="width: 5.938rem; height:3.438rem; border:none;">
-                                    <div class="card-body-1">
-                                        <span class="card-title-1">December</span>
-                                    </div>
-                                </div>
+                <div id="carouselExampleControls" class="carousel carousel-dark slide pd-24 mb-2">
 
+
+                    <div class="month-slider ">
+                        <button class="carousel-button" (click)="previousMonth()"><span
+                                class="carousel-control-prev-icon carousel-btn " aria-hidden="true"></span></button>
+                        <div class="months mb-2">
+                            <div class="active">
+                                {{ currentMonth }}
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="card-wrapper container-sm d-flex   justify-content-around">
-                                <div class="card  " style="width: 5.938rem; height:3.438rem; border:none;">
-                                    <div class="card-body-1">
-                                        <span class="card-title-1">January</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card-wrapper container-sm d-flex  justify-content-around">
-                                <div class="card" style="width: 5.938rem; height:3.438rem; border:none;">
-                                    <div class="card-body-1">
-                                        <span class="card-title-1">February</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card-wrapper container-sm d-flex  justify-content-around">
-
-                                <div class="card" style="width: 5.938rem; height:3.438rem; border:none;">
-                                    <div class="card-body-1">
-                                        <span class="card-title-1">March</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="card-wrapper container-sm d-flex  justify-content-around">
-
-                                <div class="card" style="width: 5.938rem; height:3.438rem; border:none;">
-                                    <div class="card-body-1">
-                                        <span class="card-title-1">April</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card-wrapper container-sm d-flex  justify-content-around">
-
-                                <div class="card" style="width: 5.938rem; height:3.438rem; border:none;">
-                                    <div class="card-body-1">
-                                        <span class="card-title-1">May</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card-wrapper container-sm d-flex  justify-content-around">
-
-                                <div class="card " style="width: 5.938rem; height:3.438rem; border:none;">
-                                    <div class="card-body-1">
-                                        <span class="card-title-1">June</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card-wrapper container-sm d-flex  justify-content-around">
-
-                                <div class="card " style="width: 5.938rem; height:3.438rem; border:none;">
-                                    <div class="card-body-1">
-                                        <span class="card-title-1">July</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card-wrapper container-sm d-flex  justify-content-around">
-
-                                <div class="card " style="width: 5.938rem; height:3.438rem; border:none;">
-                                    <div class="card-body-1">
-                                        <span class="card-title-1">August</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card-wrapper container-sm d-flex  justify-content-around">
-
-                                <div class="card " style="width: 5.938rem; height:3.438rem; border:none;">
-                                    <div class="card-body-1 me-4">
-                                        <span class="card-title-1">September</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card-wrapper container-sm d-flex  justify-content-around">
-
-                                <div class="card " style="width: 5.938rem; height:3.438rem; border:none;">
-                                    <div class="card-body-1">
-                                        <span class="card-title-1">October</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card-wrapper container-sm d-flex  justify-content-around">
-
-                                <div class="card " style="width: 5.938rem; height:3.438rem; border:none;">
-                                    <div class="card-body-1">
-                                        <span class="card-title-1">November</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
+                        <button class="carousel-button" (click)="nextMonth()"><span
+                                class="carousel-control-next-icon carousel-btn " aria-hidden="true"></span></button>
                     </div>
-                    <button class="carousel-control-prev left-btn-position carousel-btn-back-1" type="button"
-                        data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon carousel-btn " aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next right-1" type="button"
-                        data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        <span class="carousel-control-next-icon carousel-btn" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
 
+                <!-- if any missing info  -->
+
+                @if(hasMissingInfo){
                 <div class="problem ">
                     <div class="textproblem "><img src="../../../assets/images/warning.svg" alt="">
-                        <p>Incomplete registrations : 1</p>
+                        <p>Incomplete registrations</p>
+                    </div>
+                </div>
+                }
+
+                <div class="calendar-container mb-2">
+                    <div class="content">
+                        <div class="calendar-containers">
+                            <!-- Header Section -->
+                            <!-- <div class="header">
+                                <div class="month-view">Month View: {{ currentMonth }} {{ currentYear }}</div>
+                            </div> -->
+                            <!-- Calendar Grid -->
+                            <div class="calendar-grid">
+                                <div *ngFor="let week of calendar" class="week">
+                                    <div *ngFor="let day of week" [class.today]="isToday(day)" class="day">
+                                        {{ day }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="cal">
-                    <div class="row mx-lg-4 mt-4">
-                        <div class="col  text-dim">27</div>
-                        <div class="col text-dim">28</div>
-                        <div class="col text-dim">29</div>
-                        <div class="col text-dim">30</div>
-                        <div class="col text-dim content "><img src="../../../assets/logo/yellowdot.svg" alt=""><button
-                                class="small-box bg-transparent border-0 "> 1</button>
-                            <div class="round1"></div>
-                        </div>
-                        <div class="col">2</div>
-                        <div class="col">3</div>
-                    </div>
-                    <div class="row mx-lg-4 my-lg-4  ">
-                        <div class="col">4</div>
-                        <div class="col">5</div>
-                        <div class="col">6</div>
-                        <div class="col">7</div>
-                        <div class="col content"><img src="../../../assets/logo/yellowdot.svg" alt=""><button
-                                class="small-box bg-transparent  border-0">8</button>
-                            <div class="round1"></div>
-                        </div>
-                        <div class="col">9</div>
-                        <div class="col">10</div>
-                    </div>
-                    <div class="row mx-lg-4 my-lg-4  ">
-                        <div class="col">11</div>
-                        <div class="col">12</div>
-                        <div class="col">13</div>
-                        <div class="col">14</div>
-                        <div class="col content"><img src="../../../assets/logo/yellowdot.svg" alt=""><button
-                                class="small-box border-0">15</button>
-                            <div class="round1"></div>
-                        </div>
-                        <div class="col">16</div>
-                        <div class="col">17</div>
-                    </div>
-                    <div class="row mx-lg-4 my-lg-4  ">
-                        <div class="col">18</div>
-                        <div class="col">19</div>
-                        <div class="col">20</div>
-                        <div class="col">21</div>
-                        <div class="col">22</div>
-                        <div class="col">23</div>
-                        <div class="col">24</div>
-                    </div>
-                    <div class="row mx-lg-4 my-lg-4  ">
-                        <div class="col text-secondary">25</div>
-                        <div class="col">26</div>
-                        <div class="col">27</div>
-                        <div class="col">28</div>
-                        <div class="col">29</div>
-                        <div class="col">30</div>
-                        <div class="col">31</div>
-                    </div>
-                </div>
 
-                <div class="events pt-24">
 
-                    <div class="card  bord-left mt-2 mb-2">
+                <!-- <div class="card  bord-left mt-2 mb-2">
                         <div class="card-body ">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
@@ -358,6 +198,47 @@
                                 </div>
                             </div>
                         </div>
+                    </div> -->
+                <div class="events pt-24">
+                    <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab"
+                        tabindex="0">
+                        @for (post of postsList$ | async; track post.Id) {
+
+                        @if(!hasNullValue(post)){
+                        <div class="card  mb-2 mt-3">
+                            <div class="card-body">
+                                <div class="d-flex text-custom justify-content-between align-items-center">
+                                    <div class="ms-3">
+                                        <h5 class="card-title "><b>{{post.from}} - {{post.to}}</b></h5>
+                                        <p class="card-text mb-0 fs-14">{{post.casenumber}} - {{post.clientname}}</p>
+                                        <p class="card-text fs-14">{{post.description}}</p>
+                                    </div>
+                                    <div>
+                                        <p class="fs-14"><b>{{post.duration}}</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>}
+                        @else {
+                        <div class="card mt-3 mb-2">
+                            <div class="card-body ">
+                                <div class="d-flex bord-left justify-content-between align-items-center">
+                                    <div class="ms-3">
+                                        <h5 class="card-title "><b>{{post.from}} - {{post.to}}</b></h5>
+                                        <p class="card-text mb-0 fs-14">{{post.casenumber}} - {{post.clientname}}</p>
+                                        <p class="card-text first mb-0 fs-14">Missing Information</p>
+                                    </div>
+                                    <div>
+                                        <a class="nav-link d-inline fs-16">
+                                            <img src="../../../assets/images/warning.svg" alt="">
+                                        </a>
+                                        <span class="fs-14"><b>{{post.duration}}</b></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        }
+                        }
                     </div>
                 </div>
                 <div class="modal " tabindex="-1" id="notificationModal" style="width: 30% ;top: 13px;
@@ -428,7 +309,6 @@
                 </div>
 
                 <!-- date-carousel -->
-
 
 
 

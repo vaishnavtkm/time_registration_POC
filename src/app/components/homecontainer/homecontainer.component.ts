@@ -27,6 +27,7 @@ export class HomecontainerComponent implements OnInit {
     typeofwork: '',
     description: '',
   };
+
   constructor(
     private userDetail: UserDetailService,
     public dataShare: DataShareService,
@@ -38,9 +39,19 @@ export class HomecontainerComponent implements OnInit {
   durationHours: number = 0;
   durationMinutes: number = 0;
 
-  ngOnInit(): void {
-    this.postsList$ = this.userDetail.getTime();
+  postsArray: string[] = [];
+  postsLength: number = 0;
 
+  hasMissingCount: number = 0;
+  ngOnInit(): void {
+    if (sessionStorage.getItem('refreshToken')) {
+      this.postsList$ = this.userDetail.getTime();
+      this.postsList$.subscribe((posts) => {
+        this.postsArray = posts;
+        this.postsLength = posts.length;
+        this.checkMissingInfo(this.postsArray);
+      });
+    }
     const [duration_hours, duration_minutes] = this.dataShare.getDuration();
     this.durationHours += duration_hours;
     this.durationMinutes += duration_minutes;
@@ -60,5 +71,11 @@ export class HomecontainerComponent implements OnInit {
 
   updatePost(id: number) {
     this.router.navigate(['/addtask', { id }]);
+  }
+
+  checkMissingInfo(posts: any[]): void {
+    if (posts.some((post) => this.hasNullValue(post))) {
+      this.hasMissingCount += 1;
+    }
   }
 }

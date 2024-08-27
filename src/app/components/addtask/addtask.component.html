@@ -124,13 +124,13 @@
             <form class="row g-3 needs-validation" novalidate #myForm="ngForm">
                 <div class="col-md-4">
                     <label for="validationCustom01" class="form-label">From</label>
-                    <input type="text" class="form-control" name="from" [(ngModel)]="forms.from" id="validationCustom01"
-                        placeholder="12:42" required />
+                    <input type="time" class="form-control" name="from" [(ngModel)]="forms.from" id="validationCustom01"
+                         min="08:00" max="18:00" placeholder="12:42" required />
 
                 </div>
                 <div class="col-md-4">
                     <label for="validationCustom01" class="form-label">To</label>
-                    <input type="text" class="form-control" name="to" [(ngModel)]="forms.to" id="validationCustom01"
+                    <input type="time" class="form-control" name="to" [(ngModel)]="forms.to" id="validationCustom01"
                         placeholder="13:04" required />
 
                 </div>
@@ -176,14 +176,15 @@
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <label for="validationCustom04" class="form-label">Type of
+                    <label for="options" class="form-label">Type of
                         work</label>
-                    <select class="form-select" id="typeOfWork" [(ngModel)]="forms.typeofwork" name="typeofwork"
-                        required>
-                        <option selected disabled value>Select
-                            the type of work</option>
-                        <option>Data Gathering</option>
-                        <option>Case research</option>
+                    <select class="form-select" id="options" [(ngModel)]="forms.typeofwork" name="typeofwork" required>
+                        <option>
+                            Case Research
+                        </option>
+                        <option>
+                            Data Gathering
+                        </option>
                     </select>
 
                 </div>
@@ -202,7 +203,7 @@
                     "><img class="mb-1" src="images/Plus.png" alt style="padding-right: 4px;">Register</button>
                 </div>
             </form>
-            
+
 
         </div>
     </div>

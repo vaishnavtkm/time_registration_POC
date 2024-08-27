@@ -6,23 +6,32 @@
     <p class="title">Log In</p>
     <p class="para">Enter your work credentials in order to log in into the
       app</p>
-    <form>
+
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
       <div class="mb-3">
         <label for="Email" class="form-label">Work Email</label>
-        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp"
-          placeholder="Type in work email">
+        <input type="email" class="form-control" [(ngModel)]="email" id="Email" name="email"
+          aria-describedby="emailHelp" placeholder="Type in work email" required email #emailCtrl="ngModel">
+        <div *ngIf="emailCtrl.invalid && emailCtrl.touched" class="text-danger">
+          Please enter a valid email.
+        </div>
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Type in password">
+        <input type="password" class="form-control" [(ngModel)]="password" name="password" id="exampleInputPassword1"
+          placeholder="Type in password" required minlength="6" #passwordCtrl="ngModel">
+        <div *ngIf="passwordCtrl.invalid && passwordCtrl.touched" class="text-danger">
+          Password must be at least 6 characters long.
+        </div>
       </div>
-      <div class="mb-3 d-flex align-items-center">
+      <div class="mb-3 d-flex align-items-center log-check">
         <img src="../../../assets/images/Vector.png" alt="">
-        <label class="form-check-label mt-2 mb-0" for="exampleCheck1">Remember me
-          for 14 days</label>
+        <label class="form-check-label mt-2 mb-0" (click)="checkLogin()" for="exampleCheck1">Already Logged In ?</label>
       </div>
-      <button type="submit" class="btn btn-custom w-100" [routerLink]="'/home'">Log In</button>
+      <button type="submit" class="btn btn-custom w-100" [disabled]="loginForm.invalid">Log In</button>
     </form>
+
+
   </div>
   <div class="col-4"></div>
 </div>
